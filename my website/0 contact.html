@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div>p{
+            text-underline-position: below;
+        }
+        div>p>span{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img width="150" src="./source/logo.png" alt="logo">
+        <span id="hd">Welcome to My Site</span>
+    <nav id="global_navi">
+        <ul>
+            <li><a href="./home.html#home">Home</a></li>
+            <li><a href="./home.html#profile">Profile</a></li>
+            <li><a href="./home.html#design">Design</a></li>
+            <li><a href="./home.html#project">Project</a></li>
+            <li><a href="#contact">contact</a>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h2 id="contact">CONTACT</h2>
+<div>
+        <p> <span>Address</span>:  Waseda University-Nishiwaseda campus</p>
+        <p><span>E-mail</span>:  chenzhifresh@gmail.com</p>
+    <form id="entry">
+        <dl>
+            <dt>お名前<span class="must">*</span></dt>
+                <dd><input type="text" name="name" id="name" required></dd>
+            <dt>メールアドレス<span class="must">*</span><bt>
+                <dd><input type="text" name="mail" id="email" required></dd>
+            <dt>お問い合わせ内容<bt>
+                <dd><textarea name="CONTACT" id="联系" cols="30" rows="10"></textarea></dd>
+        <!-- <input type="radio"> -->
+        <!-- <input type="checkbox"> 可以选择复数个-->
+        </dl>
+        <p id="submit_buttom_cover">
+            <input type="submit" id="submit_buttom_cover" value="送信する">
+        </p>
+    </form>
+</div>
+</main>
+
+</body>
+</html>

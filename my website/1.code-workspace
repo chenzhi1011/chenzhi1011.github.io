@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../名称未設定フォルダ"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../web"
+		},
+		{
+			"path": "../pythonProject"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "my website"
+	}
+}
