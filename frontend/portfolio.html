@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>建筑设计作品集 - 作品集</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">YourName</div>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="portfolio.html">作品集</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>作品集</h1>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <button class="filter-btn" data-filter="residential">住宅</button>
+            <button class="filter-btn" data-filter="commercial">商业</button>
+            <button class="filter-btn" data-filter="public">公共建筑</button>
+        </div>
+
+        <div class="portfolio-grid">
+            <a href="project details/projectdetail1.html">
+                <div class="portfolio-item" data-category="residential">
+                    <img src="placeholder.jpg" alt="现代城市公寓">
+                    <h3>现代城市公寓</h3>
+                    <p>住宅 | 2023</p>
+                </div>
+            </a>
+            <a href="project-detail-2.html">
+                <div class="portfolio-item" data-category="commercial">
+                    <img src="placeholder.jpg" alt="绿色办公大楼">
+                    <h3>绿色办公大楼</h3>
+                    <p>商业 | 2022</p>
+                </div>
+            </a>
+            <a href="project-detail-3.html">
+                <div class="portfolio-item" data-category="public">
+                    <img src="placeholder.jpg" alt="滨水文化中心">
+                    <h3>滨水文化中心</h3>
+                    <p>公共建筑 | 2021</p>
+                </div>
+            </a>
+            <!-- 添加更多作品项目 -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 YourName. 保留所有权利。</p>
+        <div class="social-links">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Twitter">TW</a>
+        </div>
+    </footer>
+
+    <script src="assets/js/portfolio.js"></script>
+</body>
+</html>
