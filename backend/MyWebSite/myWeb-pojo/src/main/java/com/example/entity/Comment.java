@@ -9,13 +9,10 @@ import java.time.LocalDateTime;
 
 @Data
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
-public class Msg {
+@AllArgsConstructor
+public class Comment {
+    public String comment;
     public int id;
-    public String name;
-    public String email;
-    public String theme;
-    public String msgContent;
-    public LocalDateTime sendTime;
+    public LocalDateTime createTime;
 }

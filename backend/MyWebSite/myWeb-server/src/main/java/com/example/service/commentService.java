@@ -1,11 +1,13 @@
 package com.example.service;
 
-import com.example.entity.Comments;
-import org.springframework.stereotype.Service;
+import com.example.dto.commentDTO;
+import com.example.entity.Comment;
 
 import java.util.List;
 
-@Service
+
 public interface commentService {
-    List<Comments> getAllCm();
+    List<Comment> getAllCm();
+
+    void sendCm(commentDTO commentDto);
 }

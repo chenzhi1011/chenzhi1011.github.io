@@ -1,18 +1,18 @@
-package com.example.entity;
+package com.example.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
-
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-public class Comments {
-    public String comment;
+@NoArgsConstructor
+public class msgVO {
     public int id;
-    public LocalDateTime createTime;
+    public String name;
+    public String email;
+    public String theme;
+    public String msgContent;
 }
