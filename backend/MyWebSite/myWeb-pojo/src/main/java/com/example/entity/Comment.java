@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class Comment {
     public String comment;
+    public LocalDateTime createTime;
     public int id;
     public int pageKey;
-    public LocalDateTime createTime;
 }

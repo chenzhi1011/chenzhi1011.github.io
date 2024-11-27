@@ -11,5 +11,6 @@ public interface commentMapper {
     List<Comment> getAllCm(int pageKey);
 
     @Insert("insert into comments (comment, create_time,page_key) VALUES (#{comment},#{createTime},#{pageKey})")
+
     void sendCm(Comment comment);
 }

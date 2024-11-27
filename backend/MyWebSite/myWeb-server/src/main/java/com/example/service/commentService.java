@@ -7,6 +7,7 @@ import java.util.List;
 
 
 public interface commentService {
+
     List<Comment> getAllCm(int pageKey);
 
     void sendCm(commentDTO commentDto);
