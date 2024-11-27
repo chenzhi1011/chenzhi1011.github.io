@@ -18,8 +18,8 @@ public class commentServiceImpl implements commentService {
     @Autowired
     commentMapper  comMapper;
     @Override
-    public List<Comment> getAllCm() {
-        return comMapper.getAllCm();
+    public List<Comment> getAllCm(int pageKey) {
+        return comMapper.getAllCm(pageKey);
     }
 
     @Transactional

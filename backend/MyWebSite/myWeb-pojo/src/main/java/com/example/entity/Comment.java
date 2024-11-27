@@ -14,5 +14,6 @@ import java.time.LocalDateTime;
 public class Comment {
     public String comment;
     public int id;
+    public int pageKey;
     public LocalDateTime createTime;
 }

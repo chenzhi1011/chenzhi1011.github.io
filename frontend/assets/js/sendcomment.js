@@ -1,23 +1,24 @@
-export async function submitComment() {
-    document.getElementById('comment-form').addEventListener('submit', async function (e) {
-        e.preventDefault();
+export async function submitComment(data) {
+    try {
+        const response = await fetch('http://localhost:8088/api/comments', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        });
 
-        const commentText = document.getElementById('comment-text').value.trim();
-
-        if (commentText) {
-            const response = await fetch('/api/comments', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ content: commentText })
-            });
-
-            if (response.ok) {
-                alert('评论成功');
-                document.getElementById('comment-text').value = '';
-                location.reload(); // 刷新页面以重新加载评论
-            } else {
-                alert('评论失败，请稍后重试');
-            }
+        // 检查状态码是否为 2xx
+        if (!response.ok) {
+            const errorDetails = await response.text(); // 获取错误信息
+            console.error('Response error details:', errorDetails);
+            throw new Error('Failed to submit comment. Please try again.');
         }
-    });
+
+        console.log('Comment submitted successfully with status:', response.status);
+        return true; // 表示成功
+    } catch (error) {
+        console.error('Error during comment submission:', error);
+        throw error; // 抛出错误以便调用方处理
+    }
 }

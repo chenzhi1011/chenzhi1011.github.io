@@ -19,8 +19,8 @@ public class commentController {
     commentService commentService;
 
     @GetMapping("/comments")
-    public Result<List<Comment>> getAllCm(){
-        List<Comment> list = commentService.getAllCm();
+    public Result<List<Comment>> getAllCm(@RequestParam int pageKey){
+        List<Comment> list = commentService.getAllCm(pageKey);
         return Result.success(list);
     }
 

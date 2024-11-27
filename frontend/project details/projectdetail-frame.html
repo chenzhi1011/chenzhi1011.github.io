@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/details/project1.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../portfolio.html">PORTFOLIO</a></li>
+                <li><a href="../about.html">ABOUT ME</a></li>
+                <li><a href="../contact.html">CONTACT ME</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="subheader">
+        <h1>Framing Kawada</h1>
+    </div>
+    <div class="container">
+
+        <section class="main-pic">
+            <img src="../assets/images/images-details/project-frame/main.png" alt="main-pic">
+        </section>
+        <section class="project-details">
+            <h2>Details</h2>
+            <p>Try to use wooden material for construction.(In Sabae,Japan)</p>
+        </section>
+        <section class="project-details">
+            <p><strong>Design background: </strong></p>
+            <p>The village where this project is located boasts incredibly beautiful scenery. From the window or door of any household in the village, one can enjoy such views. This inspired our concept--Framing</p>
+            <p>At the same time, it also carries the meaning of preserving the beautiful scenery.</p>
+        </section>
+
+        <section class="project-images">
+            <img src="../assets/images/images-details/project-frame/frame-pic-1.jpg" alt="pic-1">
+            <img src="../assets/images/images-details/project-frame/frame-pic-2.jpg" alt="pic-2">
+        </section>
+        <section class="project-details">
+            <h2>Design</h2>
+            <p>According to our concept, we organized our structure using multiple overlapping frames. This approach takes inspiration from the local method of timber joinery. Additionally, the depth created by the overlapping frames helps guide people's line of sight. </p>
+            <p>This is an installation where people can rest, play, and enjoy the scenery.</p>
+        </section>
+
+        <section class="project-images">
+            <img src="../assets/images/images-details/project-frame/frame-re-1.jpg" alt="re-1">
+            <img src="../assets/images/images-details/project-frame/frame-re-2.jpg" alt="re-2">
+        </section>
+
+        <section class="comments">
+            <h2>Comments</h2>
+            <div id="comments-list">
+                <!-- 这里将通过 JavaScript 动态添加评论 -->
+            </div>
+            <form id="comment-form" class="comment-form">
+                <textarea id="comment-text" placeholder="Type your comment" required></textarea>
+                <!-- page feature -->
+                <input type="hidden" id="page-key" name="pageKey" value="1">
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+
+ 
+    <script type="module">
+        import { submitComment } from '../assets/js/sendcomment.js';
+        import { fetchComments } from '../assets/js/displaycomment.js';
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            console.log('DOMContentLoaded event fired');
+
+            // Function to fetch and display comments
+            const loadComments = async () => {
+                try {
+                    await fetchComments();
+                    console.log('Comments loaded successfully');
+                } catch (error) {
+                    console.error('Error loading comments:', error.message);
+                    alert('Failed to load comments. Please try again later.');
+                }
+            };
+
+            // Load comments on page load
+            await loadComments();
+
+            const commentForm = document.getElementById('comment-form');
+            if (!commentForm) {
+                console.error('Comment form not found in DOM');
+                return;
+            }
+
+            console.log('Comment form found, adding event listener');
+
+            // Add event listener to the form
+            commentForm.addEventListener('submit', async (event) => {
+                event.preventDefault(); // Prevent default form submit
+                console.log('Form submit event triggered');
+                const commentText = document.getElementById('comment-text').value.trim();
+                const pageKey = document.getElementById('page-key').value.trim();
+                if (!commentText) {
+                    alert('Comment content cannot be empty');
+                    return;
+                }
+
+                console.log('Submitting comment:', { commentText, pageKey });
+
+                try {
+                    const success = await submitComment({ comment: commentText, pageKey: parseInt(pageKey, 10) });// Call submitComment module
+                    if (success) {
+                        console.log('Comment submitted successfully');
+                        document.getElementById('comment-text').value = ''; // Clear textarea
+                        await loadComments(); // Re-fetch comments
+                    }
+                } catch (error) {
+                    console.error('Error submitting comment:', error.message);
+                    alert(error.message || 'An error occurred. Please try again later.');
+                }
+            });
+        });
+    </script>
+    
+    
+    <footer>
+        <p>&copy; 2024 Chenzhi. All rights reserved.</p>
+        <div class="social-links">
+            <!-- <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Twitter">TW</a> -->
+        </div>
+    </footer>
+   
+</body>
+</html>

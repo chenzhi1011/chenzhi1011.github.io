@@ -11,4 +11,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class commentDTO {
         public String comment;
+        public int pageKey;
 }

@@ -1,70 +1,112 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>关于我 - Jane Doe</title>
+    <title>My Background</title>
+    <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/aboutme.css">
 </head>
 <body>
     <header>
-        <h1>关于我 - Jane Doe</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="about.html">ABOUT ME</a></li>
+                <li><a href="contact.html">CONTACT ME</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">首页</a></li>
-            <li><a href="portfolio.html">作品集</a></li>
-            <li><a href="contact.html">联系我们</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <section class="profile">
-            <img src="your-photo.jpg" alt="Jane Doe">
-            <h2>Jane Doe</h2>
-            <p>建筑设计师 | 可持续发展倡导者</p>
-        </section>
-        <section class="timeline">
-            <div class="timeline-item left">
-                <div class="content">
-                    <h2>2010</h2>
-                    <p>进入清华大学建筑学院，开始我的建筑设计之旅。</p>
-                </div>
-            </div>
-            <div class="timeline-item right">
-                <div class="content">
-                    <h2>2014</h2>
-                    <p>获得建筑学学士学位，毕业设计《生态智能建筑》获得优秀毕业论文奖。</p>
-                </div>
-            </div>
-            <div class="timeline-item left">
-                <div class="content">
-                    <h2>2014-2016</h2>
-                    <p>加入知名建筑设计公司XYZ，参与多个商业和住宅项目的设计。</p>
-                </div>
-            </div>
-            <div class="timeline-item right">
-                <div class="content">
-                    <h2>2016-2018</h2>
-                    <p>负责北京中央公园项目的设计，该项目获得了"年度最佳城市更新设计奖"。</p>
-                </div>
-            </div>
-            <div class="timeline-item left">
-                <div class="content">
-                    <h2>2018-2020</h2>
-                    <p>在荷兰代尔夫特理工大学攻读可持续建筑设计硕士学位，深入研究绿色建筑技术。</p>
-                </div>
-            </div>
-            <div class="timeline-item right">
-                <div class="content">
-                    <h2>2020-至今</h2>
-                    <p>回国创立自己的建筑设计工作室，专注于可持续和智能建筑设计。</p>
-                </div>
-            </div>
-        </section>
-        <section class="summary">
-            <h2>我的设计理念</h2>
-            <p>作为一名建筑设计师，我深信建筑不仅仅是物理空间的构建，更是人类情感和环境的交织。我的设计理念植根于可持续发展和用户体验，致力于创造既美观又实用的空间。每一个项目，我都力求将现代美学与环保理念完美融合，打造既能满足当代需求，又能为未来留下积极影响的建筑作品。我相信，优秀的建筑设计应该能够提升使用者的生活品质，同时也要尊重和保护我们赖以生存的自然环境。通过不断学习和创新，我希望我的作品能够成为连接人、自然和科技的桥梁，为创造更美好的生活环境贡献自己的一份力量。</p>
-        </section>
+    <div class="subheader">
+        <h1>About me</h1>
+        <p>A quick glance at my background and skills.</p>
     </div>
+
+    <!-- education timeline -->
+    <section class="timeline-horizontal">
+        <h2>Education</h2>
+        <div class="timeline">
+            <div class="event">
+                <div class="circle"></div>
+                <h3>2016 - 2021</h3>
+                <p>Bachelor Degree in Architecture<br>Northeast University</p>
+            </div>
+            <div class="event">
+                <div class="circle"></div>
+                <h3>2022 - 2024</h3>
+                <p>Master Degree Architect<br>Waseda University</p>
+            </div>
+            <div class="event">
+                <div class="circle"></div>
+                <h3>2024 - Present</h3>
+                <p>System engineer<br>Hitachi</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- skills -->
+    <section class="skills">
+        <h2>Skills</h2>
+        <div class="skill-item">
+            <label for="rhino">Rhino</label>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 90%;"></div>
+            </div>
+            <span></span>
+        </div>
+        <div class="skill-item">
+            <label for="cad">AutoCAD</label>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 90%;"></div>
+            </div>
+            <span></span>
+        </div>
+        <div class="skill-item">
+            <label for="photoshop">Photoshop</label>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 85%;"></div>
+            </div>
+            <span></span>
+        </div>
+        <div class="skill-item">
+            <label for="rendering">Lumion</label>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 70%;"></div>
+            </div>
+            <span></span>
+        </div>
+
+        <div class="skill-item">
+            <label for="rendering">Lumion</label>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 70%;"></div>
+            </div>
+            <span></span>
+        </div>
+    </section>
+
+    <section class="programming">
+        <h2>Programming Skills</h2>
+        <!-- Programming Skills -->
+        <div class="programming-skills">
+            <ul>
+                <li><strong>Languages:</strong> Java, Python, HTML, CSS, JavaScript</li>
+                <li><strong>Frameworks:</strong> Spring, Spring Boot, MyBatis</li>
+                <li><strong>Databases:</strong> MySQL, Redis</li>
+                <li><strong>APIs:</strong> RESTful API, Postman</li>
+                <li><strong>Source Code Management:</strong> Git, GitHub</li>
+            </ul>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Chenzhi. All rights reserved.</p>
+        <div class="social-links">
+            <!-- <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Twitter">TW</a> -->
+        </div>
+    </footer>
 </body>
 </html>
