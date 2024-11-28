@@ -8,17 +8,27 @@ export async function submitComment(data) {
             body: JSON.stringify(data),
         });
 
-        // 检查状态码是否为 2xx
+        // check response 
         if (!response.ok) {
-            const errorDetails = await response.text(); // 获取错误信息
+            const errorDetails = await response.text(); 
             console.error('Response error details:', errorDetails);
             throw new Error('Failed to submit comment. Please try again.');
         }
 
-        console.log('Comment submitted successfully with status:', response.status);
-        return true; // 表示成功
+        const result = await response.json(); 
+        console.log('Server response:', result);
+
+        // check result.code
+        if (result.code === 0) {
+            alert(result.msg); 
+            return true; 
+        }else{
+            alert("send successfully")
+            return true;
+        }
+
     } catch (error) {
         console.error('Error during comment submission:', error);
-        throw error; // 抛出错误以便调用方处理
+        throw error; 
     }
 }

@@ -66,61 +66,12 @@
 
  
     <script type="module">
-        import { submitComment } from '../assets/js/sendcomment.js';
-        import { fetchComments } from '../assets/js/displaycomment.js';
-
-        document.addEventListener('DOMContentLoaded', async () => {
-            console.log('DOMContentLoaded event fired');
-
-            // Function to fetch and display comments
-            const loadComments = async () => {
-                try {
-                    await fetchComments();
-                    console.log('Comments loaded successfully');
-                } catch (error) {
-                    console.error('Error loading comments:', error.message);
-                    alert('Failed to load comments. Please try again later.');
-                }
-            };
-
-            // Load comments on page load
-            await loadComments();
-
-            const commentForm = document.getElementById('comment-form');
-            if (!commentForm) {
-                console.error('Comment form not found in DOM');
-                return;
-            }
-
-            console.log('Comment form found, adding event listener');
-
-            // Add event listener to the form
-            commentForm.addEventListener('submit', async (event) => {
-                event.preventDefault(); // Prevent default form submit
-                console.log('Form submit event triggered');
-                const commentText = document.getElementById('comment-text').value.trim();
-                const pageKey = document.getElementById('page-key').value.trim();
-                if (!commentText) {
-                    alert('Comment content cannot be empty');
-                    return;
-                }
-
-                console.log('Submitting comment:', { commentText, pageKey });
-
-                try {
-                    const success = await submitComment({ comment: commentText, pageKey: parseInt(pageKey, 10) });// Call submitComment module
-                    if (success) {
-                        console.log('Comment submitted successfully');
-                        document.getElementById('comment-text').value = ''; // Clear textarea
-                        await loadComments(); // Re-fetch comments
-                    }
-                } catch (error) {
-                    console.error('Error submitting comment:', error.message);
-                    alert(error.message || 'An error occurred. Please try again later.');
-                }
-            });
-        });
+        import { initializeComments } from '../assets/js/projectdetail-common.js';
+    
+        // Initialize the comments logic for this page
+        initializeComments('comment-form', 'comment-text', 'page-key');
     </script>
+    
     
     
     <footer>
