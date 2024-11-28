@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT ME</title>
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- <div class="logo">CHENZHI</div> -->
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="about.html">ABOUT ME</a></li>
+                <li><a href="contact.html">CONTACT ME</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contact-container">
+            <h1>Send Email To Me</h1>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="theme">Theme</label>
+                    <input type="text" id="theme" name="theme" required>
+                </div>
+                <div class="form-group">
+                    <label for="msgContent">Message</label>
+                    <textarea id="msgContent" name="msgContent" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="form-message"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Chenzhi. All rights reserved.</p>
+        <!-- <div class="social-links">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Twitter">TW</a>
+        </div> -->
+    </footer>
+
+    <script src="assets/js/contact.js">
+        const msgField = document.getElementById('msgContent');
+console.log('Name attribute of msgContent field:', msgField.name); // output "msgContent"
+    </script>
+</body>
+</html>

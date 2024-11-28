@@ -1,0 +1,150 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 30px 20px;
+    border-radius: 8px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.2rem;
+}
+
+/* Horizontal Timeline */
+.timeline-horizontal h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.timeline {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+    gap: 20px;
+}
+
+/* 整条水平线 */
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 100%; /* 时间线长度为整个容器 */
+    height: 3px; /* 线的厚度 */
+    background-color: #007bff; /* 线的颜色 */
+    top: 10px; /* 与圆圈对齐 */
+    left: 0; /* 从容器左边开始 */
+    z-index: -1; /* 确保线在背景层 */
+}
+
+/* 每个事件的样式 */
+.event {
+    text-align: center;
+    flex: 1;
+    position: relative;
+}
+
+/* 圆圈样式 */
+.event .circle {
+    width: 20px;
+    height: 20px;
+    background-color: #007bff;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    position: relative;
+}
+
+/* 时间点文字 */
+.event h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.event p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Skills Section */
+.skills {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skills h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.skill-item label {
+    flex: 1;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.skill-bar {
+    flex: 3;
+    background-color: #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 10px;
+    position: relative;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 6px;
+    position: absolute;
+}
+
+.skill-item span {
+    flex: 1;
+    text-align: right;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+}

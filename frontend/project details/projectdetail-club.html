@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/details/project1.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../portfolio.html">PORTFOLIO</a></li>
+                <li><a href="../about.html">ABOUT ME</a></li>
+                <li><a href="../contact.html">CONTACT ME</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="subheader">
+        <h1>Sports Club</h1>
+    </div>
+    <div class="container">
+
+        <section class="main-pic">
+            <img src="../assets/images/images-details/project-club/club.png" alt="main-pic">
+        </section>
+        <section class="project-details">
+            <h2>Details</h2>
+            <p>Encouraging Physical Activity Through Spatial Design</p>
+        </section>
+        <section class="project-details">
+            <p><strong>Design background: </strong></p>
+            <p>Unlike traditional gyms, this design seeks to explore what kind of space can inspire the purest desire for movement. 
+                The goal is to create a non-traditional sports club that redefines how people engage with physical activity.</p>
+        </section>
+
+        <section class="project-images">
+            <img src="../assets/images/images-details/project-club/club-pic-1.jpg" alt="pic-1">
+            <img src="../assets/images/images-details/project-club/club-pic-1.png" alt="pic-2">
+        </section>
+        <section class="project-details">
+            <h2>Design: </h2>
+            <p>By studying people's exercise trajectories within a space, the design adopts a subtractive approach to shaping the environment.
+                 For example, a raised area might invite someone to step onto it, while an uneven surface could inspire jumping movements.
+                  Building on this concept, the overall space is organized to naturally evoke and encourage physical activity through subtle spatial cues.</p>
+        </section>
+
+        <section class="project-images">
+            <img src="../assets/images/images-details/project-club/club-re-1.jpg" alt="re-1">
+            <img src="../assets/images/images-details/project-club/club-re-1.png" alt="re-2">
+        </section>
+
+        <section class="comments">
+            <h2>Comments</h2>
+            <div id="comments-list">
+            </div>
+            <form id="comment-form" class="comment-form">
+                <textarea id="comment-text" placeholder="Type your comment" required></textarea>
+                <!-- page feature -->
+                <input type="hidden" id="page-key" name="pageKey" value="4">
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+
+ 
+    <script type="module">
+        import { initializeComments } from '../assets/js/projectdetail-common.js';
+    
+        // Initialize the comments logic for this page
+        initializeComments('comment-form', 'comment-text', 'page-key');
+    </script>
+    
+    
+    <footer>
+        <p>&copy; 2024 Chenzhi. All rights reserved.</p>
+        <div class="social-links">
+            <!-- <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Twitter">TW</a> -->
+        </div>
+    </footer>
+</body>
+</html>

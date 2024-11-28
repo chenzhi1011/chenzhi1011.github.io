@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/details/project1.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../portfolio.html">PORTFOLIO</a></li>
+                <li><a href="../about.html">ABOUT ME</a></li>
+                <li><a href="../contact.html">CONTACT ME</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="subheader">
+        <h1>Collective Housing</h1>
+    </div>
+    <div class="container">
+
+        <section class="main-pic">
+            <img src="../assets/images/images-details/project-housing/housing.png" alt="main-pic">
+        </section>
+        <section class="project-details">
+            <h2>Details</h2>
+            <p>A Residential Community Designed for the Elderly</p>
+        </section>
+        <section class="project-details">
+            <p><strong>Design background: </strong></p>
+            <p>This is a residential design project set against the backdrop of an aging population. The site is located
+                in Fujian, China. With China's rapid development in recent years, many old residences have been
+                demolished and replaced with newly built commercial housing, which often fails to meet the needs of
+                elderly residents.</p>
+            <p>This design aims to explore how the area should be reconstructed after demolition to better serve the
+                local population.</p>
+        </section>
+
+        <section class="project-images">
+            <img src="../assets/images/images-details/project-housing/housing-pic-1.jpg" alt="pic-1">
+            <img src="../assets/images/images-details/project-housing/housing-pic-2.jpg" alt="pic-2">
+        </section>
+        <section class="project-details">
+            <h2>Design</h2>
+            <p>The chosen site features a fascinating spatial element—the roads.
+                This area is interconnected by roads of various sizes, serving as connections not only in a spatial
+                sense but also in terms of daily life. Each household engages in different activities along these roads,
+                enhancing the sense of community and reducing feelings of isolation. Furthermore, these road networks do
+                not exist independently but are formed organically, shaped by the surrounding buildings.</p>
+            <p>Therefore, this design revolves around the concept of roads.</p>
+        </section>
+
+        <section class="project-images">
+            <img src="../assets/images/images-details/project-housing/housing-re-1.jpg" alt="re-1">
+            <img src="../assets/images/images-details/project-housing/housing-re-2.jpg" alt="re-2">
+        </section>
+
+        <section class="comments">
+            <h2>Comments</h2>
+            <div id="comments-list">
+                <!-- 这里将通过 JavaScript 动态添加评论 -->
+            </div>
+            <form id="comment-form" class="comment-form">
+                <textarea id="comment-text" placeholder="Type your comment" required></textarea>
+                <!-- page feature -->
+                <input type="hidden" id="page-key" name="pageKey" value="2">
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+
+
+    <script type="module">
+        import { initializeComments } from '../assets/js/projectdetail-common.js';
+    
+        // Initialize the comments logic for this page
+        initializeComments('comment-form', 'comment-text', 'page-key');
+    </script>
+    
+
+
+    <footer>
+        <p>&copy; 2024 Chenzhi. All rights reserved.</p>
+        <div class="social-links">
+            <!-- <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Twitter">TW</a> -->
+        </div>
+    </footer>
+
+</body>
+
+</html>
